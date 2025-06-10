@@ -24,7 +24,10 @@ model User {
 model Stream {
   id          String     @id @default(uuid())
   type        StreamType
+  title       String     @default("")
   url         String
+  smallImg    String     @default("")
+  bigImg      String     @default("")
   extractedId String
   active      Boolean    @default(true)
   userId      String
