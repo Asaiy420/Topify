@@ -13,7 +13,7 @@ export async function POST(req: NextRequest){
 
     if (!session?.user?.email){
         return NextResponse.json({
-            error: "You must be logged in to downvote streams",
+            error: "You must be logged in to upvote streams",
         }, {status: 403})
     }
 
@@ -26,7 +26,7 @@ export async function POST(req: NextRequest){
 
     if (!user){
         return NextResponse.json({
-            error: "You must be logged in to downvote streams",
+            error: "You must be logged in to upvote streams",
         }, {status: 403})
     }
 
@@ -42,7 +42,7 @@ export async function POST(req: NextRequest){
 
     } catch (e) {
         return NextResponse.json({
-            error: "Error when downvoting a stream", e,
+            error: "Error when upvoting a stream", e,
         }, {status: 403})
     }
 
