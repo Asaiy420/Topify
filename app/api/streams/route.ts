@@ -27,7 +27,7 @@ export async function POST(req: NextRequest) {
 
     const extractedId = data.url.split("v=")[1].split("&")[0];
 
-    await prismaClient.stream.create({
+    const stream = await prismaClient.stream.create({
       data: {
         userId: data.creatorId,
         url: data.url,
@@ -35,6 +35,12 @@ export async function POST(req: NextRequest) {
         extractedId,
       },
     });
+
+    return NextResponse.json({
+      message: "Stream added successfully",
+      id: stream.id,
+
+    })
     } catch (e) {
     return NextResponse.json(
       {
