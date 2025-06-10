@@ -3,7 +3,7 @@ import { z } from "zod";
 import { prismaClient } from "@/app/lib/db";
 
 const YT_REGEX = new RegExp(
-  "/^https?://(www.)?youtube.com/watch?v=[w-]{11}(&t=d+s?)?/"
+  "^https?://(www\\.)?youtube\\.com/watch\\?v=[\\w-]{11}(&t=\\d+s)?$"
 );
 
 const CreateStreamSchema = z.object({
