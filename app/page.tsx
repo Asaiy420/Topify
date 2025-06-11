@@ -11,10 +11,12 @@ import {
   Upload,
   Headphones,
 } from "lucide-react";
+import {Redirect} from "./components/Redirect";
 export default function Home() {
   return (
     <main className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
       <Appbar />
+      <Redirect/>
       {/* Hero Section */}
       <section className="px-4 py-16 md:py-24 text-center">
         <div className="max-w-4xl mx-auto">
@@ -43,10 +45,9 @@ export default function Home() {
             </Button>
             <Button
               size="lg"
-              variant="outline"
               className="bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white px-8"
             >
-              <Headphones className="w-5 h-5 mr-2" />
+              <Headphones className="size-5 mr-2" />
               Join as Fan
             </Button>
           </div>
@@ -193,8 +194,7 @@ export default function Home() {
             </Button>
             <Button
               size="lg"
-              variant="outline"
-              className="border-white/20 text-white hover:bg-white/10 flex-1"
+              className="bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white flex-1"
             >
               Learn More
             </Button>
