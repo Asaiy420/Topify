@@ -20,7 +20,6 @@ export function Appbar() {
         <div className="flex items-center">
           {session?.data?.user ? (
             <Button
-              variant="outline"
               className="bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white"
               onClick={() => signOut()}
             >
