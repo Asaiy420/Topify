@@ -40,6 +40,10 @@ export async function POST(req: NextRequest){
             }
         })
 
+        return NextResponse.json({
+            message: "Upvote successful",
+        })
+
     } catch (e) {
         return NextResponse.json({
             error: "Error when upvoting a stream", e,
